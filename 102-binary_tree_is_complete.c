@@ -33,7 +33,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 		if (current == NULL)
 			null_encountered = 1;
 
-		if (null_encountered && queue[front + 1])
+		if (null_encountered && queue[front])
 		{
 			return (0);
 		}
