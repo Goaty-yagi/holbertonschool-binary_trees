@@ -19,7 +19,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 {
 	binary_tree_t *queue[8192];
 	size_t front = 0, rear = 0, null_encountered = 0;
-	binary_tree_t *current;
+	binary_tree_t *current = NULL;
 
 	if (!tree)
 		return (0);
