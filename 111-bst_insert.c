@@ -51,6 +51,21 @@ bst_t *find_bst_insert(bst_t *node, bst_t *new_node)
 	}
 }
 
+/*
+ * bst_insert - Insert a new node with a given value into
+ * a Binary Search Tree (BST)
+ *
+ * @tree: Pointer to the root of the BST
+ * @value: Value to be inserted into the BST
+ *
+ * This function inserts a new node with the specified value
+ * into the BST rooted at the given pointer. If the tree is empty,
+ * the new node becomes the root. Otherwise, it calls the find_bst_insert
+ * function to determine the correct position for insertion.
+ *
+ * Return: Pointer to the inserted node, or NULL if memory allocation fails.
+ */
+
 bst_t *bst_insert(bst_t **tree, int value)
 {
 	bst_t *new_node;
@@ -60,6 +75,9 @@ bst_t *bst_insert(bst_t **tree, int value)
 		return (NULL);
 
 	new_node->n = value;
+	new_node->left = NULL;
+	new_node->right = NULL;
+	new_node->parent = NULL;
 	if (*tree == NULL)
 	{
 		*tree = new_node;
