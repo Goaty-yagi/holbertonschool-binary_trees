@@ -8,7 +8,10 @@ bst_t *find_bst_insert(bst_t *node, bst_t *new_node)
 	if (node->n > new_node->n && !(find_bst_insert(node->left, new_node)))
 	{
 		if (node->n == new_node->n)
+		{
+			free(new_node);
 			return (NULL);
+		}
 		node->left = new_node;
 		new_node->parent = node;
 		return (new_node);
@@ -16,7 +19,10 @@ bst_t *find_bst_insert(bst_t *node, bst_t *new_node)
 	if (node->n < new_node->n && !(find_bst_insert(node->right, new_node)))
 	{
 		if (node->n == new_node->n)
+		{
+			free(new_node);
 			return (NULL);
+		}
 		node->right = new_node;
 		new_node->parent = node;
 		return (new_node);
