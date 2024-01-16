@@ -1,19 +1,17 @@
 #include "binary_trees.h"
 
-/*
- * find_bst_insert - Find the correct position to insert
- * a node in a Binary Search Tree (BST)
+/**
+ * find_bst_insert - Find the correct position to insert a node
+ * in a Binary Search Tree (BST)
  *
  * @node: Pointer to the current node in the BST
  * @new_node: Pointer to the new node to be inserted
  *
- * description:
  * This function recursively searches for the correct position
- * to insert the new node
- * in the BST, ensuring that duplicate values are not inserted.
- * If the value already exists, the new node is freed, and NULL
- * is returned. Otherwise, the new node is
- * inserted at the appropriate position and returned.
+ * to insert the new node in the BST, ensuring that duplicate
+ * values are not inserted. If the value already exists,
+ * the new node is freed, and NULL is returned. Otherwise,
+ * the new node is inserted at the appropriate position and returned.
  *
  * Return: Pointer to the inserted node, or NULL if the value already exists or
  *         memory allocation fails.
@@ -52,18 +50,17 @@ bst_t *find_bst_insert(bst_t *node, bst_t *new_node)
 	}
 }
 
-/*
+/**
  * bst_insert - Insert a new node with a given value into
  * a Binary Search Tree (BST)
  *
  * @tree: Pointer to the root of the BST
  * @value: Value to be inserted into the BST
  *
- * description:
- * This function inserts a new node with the specified value
- * into the BST rooted at the given pointer. If the tree is empty,
- * the new node becomes the root. Otherwise, it calls the find_bst_insert
- * function to determine the correct position for insertion.
+ * This function inserts a new node with the specified value into
+ * the BST rooted at the given pointer. If the tree is empty,
+ * the new node becomes the root. Otherwise, it calls
+ * thefind_bst_insert function to determine the correct position for insertion.
  *
  * Return: Pointer to the inserted node, or NULL if memory allocation fails.
  */
